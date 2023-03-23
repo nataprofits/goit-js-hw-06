@@ -3,20 +3,20 @@
 const form = document.querySelector('.login-form');
 
 form.addEventListener('submit', (event) => {
-  event.preventDefault(); // перешкоджаємо перезавантаженню сторінки при відправленні форми
+  event.preventDefault();
 
   const { email, password } = form.elements;
 
-  if (!email.value || !password.value) { // перевіряємо чи заповнені всі поля
+  if (!email.value || !password.value) { 
     alert('All fields are required!');
   } else {
-    const formData = { // створюємо об'єкт з введеними даними
+    const formData = { 
       email: email.value,
       password: password.value
     };
 
-    console.log(formData); // виводимо об'єкт з введеними даними в консоль
+    console.log(formData); 
 
-    form.reset(); // очищуємо значення полів форми
+    form.reset(); 
   }
 });
